@@ -11,7 +11,7 @@
         var hash = window.location.hash;
 
         // 重定向到index.html
-        window.location.href = '/' + path + search + hash;
+        window.location.href = window.location.origin + '/vue3-admin' + path + search + hash;
     </script>
 </head>
 
@@ -19,5 +19,6 @@
     <!-- 如果JavaScript被禁用，显示这个信息 -->
     <p>正在重定向...</p>
 </body>
+
 
 </html>

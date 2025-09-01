@@ -1,0 +1,267 @@
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex: 1;
+  }
+}
+
+.shadow-content {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 3px 3px 5px rgba(127, 127, 127, 0.35);
+  padding: 8px 4px;
+
+  &+.shadow-content {
+    margin-top: 10px;
+  }
+}
+
+.content-title,
+.content-title-small {
+  position: relative;
+  padding-left: 1.2rem;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 3;
+  border-bottom: 1.6px solid;
+  color: $--cas-text2;
+  border-color: $--cas-table-border;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 1.8rem;
+    background-color: $--cas-color2;
+    border-radius: 2px;
+  }
+}
+
+.content-title-small {
+  &::before {
+    width: 5px;
+    border-radius: 0px;
+  }
+}
+
+.content-title-self {
+  position: relative;
+  padding-left: 1.2rem;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 2;
+  // border-bottom: 1.6px solid;
+  color: $--cas-text2;
+  border-color: $--cas-table-border;
+  // background-color:#d3e3fd;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 1.8rem;
+    background-color: $--cas-color2;
+    border-radius: 2px;
+  }
+}
+
+.cas_search_content {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &>div {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.cas_page_padding {
+  padding: 8px;
+}
+
+.cas_detail_dialog {
+  .el-dialog__header {
+    color: $--cas-color10;
+    background-color: $--cas-color1;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  .el-dialog__headerbtn {
+    top: 50%;
+    transform: translateY(-50%);
+
+    .el-dialog__close {
+      color: $--cas-color10;
+      font-size: 30px;
+    }
+  }
+
+  .el-dialog__body {
+    height: calc(100% - 50px);
+    padding: 0;
+  }
+
+  .dialog_content {
+    padding: 10px 20px;
+
+    .dialog_hint {
+      color: red;
+      font-size: 14px;
+    }
+
+    .dialog_function {
+      display: flex;
+      align-items: center;
+      margin: 20px 0 30px;
+      position: relative;
+
+      .el-upload-list {
+        position: absolute;
+        left: 0;
+      }
+
+      .download {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        color: $--cas-color1;
+        border-bottom: 3px solid $--cas-color1;
+      }
+    }
+
+    .dialog-footer {
+      display: flex;
+      justify-content: center;
+
+      .el-button+.el-button {
+        margin-left: 25px;
+      }
+    }
+  }
+}
+
+.cas_tree {
+  background-color: transparent;
+}
+
+.cas_layer-tree-wrapper {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+
+  .layer-tree-wrapper {
+    width: auto;
+  }
+}
+
+.map_box {
+  position: relative;
+}
+
+// 自定义样式---------------------------------------------------------
+.df {
+  display: flex;
+}
+
+.fdc {
+  flex-direction: column;
+}
+
+.aic {
+  align-items: center;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.jcse {
+  justify-content: space-evenly;
+}
+
+.jcsa {
+  justify-content: space-around;
+}
+
+.f1 {
+  flex: 1
+}
+
+.ml12 {
+  margin-left: 12px;
+}
+
+.ml16 {
+  margin-left: 16px;
+}
+
+.itemRight {
+  position: absolute;
+  right: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+// 按钮
+.myBtn {
+  margin: 0px 6px
+}
+
+// 地图
+// 弹窗相关
+.popover-container .popover-content {
+  height: auto !important
+}
+
+
+.abnormal-data-bg {
+  background-color: $--cas-abnormal-data-bg;
+  .ant-form-item-explain-error{
+    color: #000;
+  }
+}
+
+
+
+.underline-anim{
+  position: relative;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.underline-anim::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 0;
+	height: 1px;
+	background: currentColor;
+}
+.underline-anim:hover::after {
+	width: 100%;
+}

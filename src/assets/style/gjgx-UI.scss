@@ -1,0 +1,126 @@
+$color-primary: #2470ff;
+
+.gjgx-h1-title {
+  position: relative;
+  margin: 12px !important;
+  color: $color-primary;
+  font-size: 16px;
+  padding-left: 24px;
+  line-height: 40px;
+  z-index: 1;
+  font-family: "微软雅黑 Bold", "微软雅黑", sans-serif;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 330px;
+    height: 40px;
+    background: linear-gradient(to right, #ecf3ff, transparent);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 24px;
+    background-color: $color-primary;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.gjgx-h2-title {
+  position: relative;
+  margin: 12px !important;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.gjgx-h3-title {
+  position: relative;
+  margin: 12px !important;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.gjgx-top-box {
+  overflow: hidden;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+
+  & > * {
+    margin: 20px 15px;
+  }
+}
+
+// .gjgx-container-2 {
+.gjgx-middle-box {
+  overflow: hidden;
+  width: 100%;
+  background-color: rgba($color: #fff, $alpha: 0.6);
+  border-radius: 20px;
+
+  & > * {
+    margin: 20px 15px;
+  }
+
+  .gjgx-top-box {
+    width: auto;
+    // 阴影投影X为0，Y为0，模糊度15px，投影颜色为#2470FF，透明度24%
+    box-shadow: 0 0 15px 0 rgba(36, 112, 255, 0.24);
+    border-radius: 12px;
+  }
+}
+
+.gjgx-bottom-box {
+  overflow: hidden;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+
+  & > * {
+    margin: 20px 15px;
+  }
+
+  .gjgx-middle-box {
+    width: auto;
+    background-color: #eef4ff;
+    border-radius: 12px;
+
+    .gjgx-top-box {
+      box-shadow: none;
+      border-radius: 12px;
+    }
+  }
+}
+
+.gjgx-line-title {
+  width: 100%;
+  color: #333;
+  font-size: 28px;
+  height: 37px;
+  position: relative;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 125px;
+    height: 9px;
+    background-color: $color-primary;
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    border-radius: 6px;
+  }
+}

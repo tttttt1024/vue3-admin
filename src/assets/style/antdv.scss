@@ -1,0 +1,447 @@
+$--cas--color1: #2470ff;
+$--cas--color2: #e7efff;
+
+.ant-btn {
+  border-radius: 4px;
+}
+
+.ant-btn+.ant-btn {
+  margin-left: 10px;
+}
+
+.ant-btn-primary {
+  background-color: $--cas--color1;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.ant-btn.ant-btn-lg {
+  border-radius: 5px;
+}
+
+.ant-btn.btn-h-36 {
+  height: 36px;
+}
+
+.ant-btn.btn-min-w-100 {
+  min-width: 100px;
+}
+
+
+.ant-btn.btn-light-blue {
+  color: $--cas--color1;
+  background-color: $--cas--color2;
+  border: none;
+
+  &:hover {
+    background: darken($--cas--color2, 10%);
+    border-color: darken($--cas--color2, 10%);
+    color: $--cas--color1;
+  }
+}
+
+.custom-btn {
+  min-width: 80px;
+  height: 36px;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+  font-family: "微软雅黑", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.icon-btn {
+  &>span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.ant-modal-header {
+  min-height: 50px;
+  background-color: $--cas-color1 !important;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+
+  .ant-modal-title {
+    color: $--cas-text6;
+  }
+}
+
+.ant-modal-close-x {
+  color: $--cas-text6;
+}
+
+.ant-modal-content {
+  padding: 0 !important;
+
+  .ant-modal-body,
+  .ant-modal-footer {
+    padding: 8px;
+  }
+}
+
+.ant-btn-link {
+  padding: 5px !important;
+}
+
+.ant-btn-text {
+  color: $--cas-text7;
+  padding: 0;
+
+  &:hover {
+    color: $--cas-text7 !important;
+    opacity: 0.9;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  &:focus {
+    color: $--cas-text7 !important;
+  }
+}
+
+.ant-table-thead {
+  .ant-table-cell {
+    color: $--cas-text1 !important;
+    background-color: $--cas-th-bg !important;
+  }
+}
+
+.ant-table-wrapper {
+  height: 100%;
+
+  .ant-spin-nested-loading {
+    height: 100%;
+
+    .ant-spin-container {
+      height: 100%;
+
+      .ant-table-pagination {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.ant-spin-nested-loading {
+  height: 100%;
+  width: 100%;
+
+  .ant-spin-container {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.ant-radio-group-solid .ant-radio-button-wrapper-checked {
+  background-color: $--cas-color1 !important;
+  border-color: $--cas-color1 !important;
+}
+
+.ant-input-number-input[disabled] {
+  color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: #d9d9d9;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+// antdv弹窗样式
+.ant-modal .ant-modal-content {
+  padding: 0px;
+
+  .ant-modal-title {
+    color: $--cas-color10;
+    background-color: $--cas-color1;
+    padding: 8px;
+  }
+
+  .ant-modal-body {
+    padding: 8px;
+  }
+
+  .ant-modal-close {
+    top: 2px;
+    color: $--cas-color10;
+    padding: 8px;
+  }
+
+
+  .ant-modal-footer {
+    border-top: 1px solid #ccc;
+    text-align: center;
+    padding: 4px 0;
+  }
+}
+
+.ant-table-column-sorter-inner {
+  color: $--cas-color10;
+}
+
+.loading-relative {
+  position: relative;
+  z-index: 101;
+  height: 100%;
+  width: 100%;
+
+  .ant-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $--cas-general-white;
+    z-index: 99;
+  }
+}
+
+$--search-input-height: 40px;
+
+.custom-search-bar-box {
+
+  .ant-select-selector,
+  .ant-form-item-control-input,
+  .ant-form-item-control-input-content,
+  .ant-input-affix-wrapper {
+    height: $--search-input-height !important;
+  }
+
+  .ant-select-selection-search-input,
+  .ant-select-selection-placeholder,
+  .ant-select-selection-item {
+    height: 38px !important;
+    line-height: 38px !important;
+  }
+
+  .ant-select-multiple {
+    .ant-select-selection-item {
+      height: 28px !important;
+      line-height: 26px !important;
+    }
+  }
+
+  .ant-form-item .ant-form-item-label {
+    label {
+      height: $--search-input-height;
+      line-height: $--search-input-height;
+    }
+  }
+
+  .num-input-range {
+    height: $--search-input-height;
+
+    .ant-input-number,
+    input {
+      height: 38px !important;
+      line-height: 38px !important;
+    }
+  }
+  .ant-picker{
+    height: 100%;
+  }
+}
+
+
+.common-form-container {
+  .ant-form-item-control-input{
+    height: 100%;
+  }
+  .ant-form-item-control-input-content{
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .display-value{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    font-size: 16px;
+  }
+  .ant-select-selection-item,
+  .ant-select-selection-placeholder {
+    text-align: left;
+  }
+
+  .ant-form-item-control:has(.upload-file-container) {
+    max-width: 100% !important;
+  }
+
+  .ant-input-disabled,
+  .ant-picker-disabled,
+  .ant-select-disabled,
+  .ant-picker-input>input[disabled],
+  .ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    color: #7F7F7F !important;
+  }
+}
+
+
+.common-form-label-bold {
+  .ant-form {
+    .ant-form-item {
+      .ant-form-item-label {
+        label {
+          display: flex;
+          justify-content: flex-start !important;
+          align-items: center;
+          width: 100%;
+          font-family: "微软雅黑 Bold", "微软雅黑", sans-serif;
+          font-weight: 700 !important;
+          font-style: normal;
+          font-size: 16px;
+          text-align: left;
+          color: #000 !important;
+        }
+      }
+    }
+  }
+}
+
+
+.custom-modal {
+  .ant-modal {
+    top: 60px;
+    padding-bottom: 0;
+  }
+
+  .ant-modal-content {
+    padding: 0;
+    border-radius: 13px;
+  }
+
+  .ant-modal-close-x {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .ant-modal-header {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    background-color: $--cas-color1;
+    padding: 0;
+    .ant-modal-title {
+      padding: 0 20px;
+      height: 60px;
+      line-height: 60px;
+      background-color: $--cas--color1;
+      font-family: "微软雅黑 Bold", "微软雅黑", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 18px;
+      color: #ffffff;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+  }
+
+  .ant-modal-body,
+  .ant-modal-footer {
+    padding: 20px;
+  }
+
+  .custom-modal-content {
+    font-family: "Arial Normal", "Arial", sans-serif;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+  }
+  .custom-modal-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    img{
+      width: 68px;
+      height: 68px;
+    }
+  }
+  .ant-modal-footer {
+    margin: 0;
+    border: none;
+    border-top:none !important;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px !important;
+    gap: 20px;
+    button {
+      background-color: $--cas--color1;
+      height: 40px;
+      font-family: "微软雅黑", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 16px;
+      min-width: 100px;
+    }
+
+    .custom-modal-btn-cancel {
+      background-color: $--cas--color2;
+      font-family: "微软雅黑", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 16px;
+      color: #2470FF;
+      border: none;
+    }
+
+    .ant-btn-default {
+      background-color: $--cas--color2;
+      color: $--cas--color1;
+    }
+  }
+}
+
+.full-modal {
+  .ant-modal {
+    max-width: 100%;
+    top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .ant-modal-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh);
+  }
+
+  .ant-modal-body {
+    flex: 1;
+  }
+}
+.ant-modal-mask{
+  z-index: 10 !important;
+}
+.modal-zindex-10{
+  z-index: 11 ;
+}
